@@ -1,6 +1,5 @@
 let dataObject;
-
-setInterval(function() {
+function update() {
     fetch(`https://api.lanyard.rest/v1/users/570693486500773888`)
         .then(response => response.json())
         .then(data => {
@@ -32,5 +31,9 @@ setInterval(function() {
                 }
             }
         });
-}, 5000);
+}
+
+update(); // call so we dont need to wait 5 secs to first show
+
+setInterval(update, 5000);
 
