@@ -3,14 +3,28 @@
     src: url("assets/tahoma.woff2");
 }
 
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url("assets/ms_sans_serif.woff2");
+}
+
 body {
     font-family: Tahoma;
     cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAAAAA////g93P0gAAAAN0Uk5T/wD/aewfvgAAAFpJREFUeJxjFHVgAANG1gAoQ9EEytDQhTK0XjtAGdEXoIzyLVBG3VoooyHbAcq4fQHCKEsMgZhTCVWsyK4LtUsZyhA1PQ3RFfoVxvhrfAGN8f8gVIoB6h46MgCudBzBJW3EcgAAAABJRU5ErkJggg==), default;
 }
 
-button:hover {
-    cursor: url('assets/link.cur'), progress !important;
+* {
+    user-select: none;
 }
+/* 
+#winamp * {
+    position: fixed;
+    z-index: 99999;
+} */
+
+/* button:hover {
+    cursor: url('assets/link.cur'), progress !important;
+} */
 
 #bg{
     position: fixed;
@@ -21,67 +35,175 @@ button:hover {
 }
 
 #main{
-    width: 300px;
     backdrop-filter: blur(5px);
-    height: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -80%);   
 }
+
+#main .w7-window-body {
+    width: 300px;
+    height: 180px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+}
+
 #avatar {
+    width: 76px;
+    height: 76px;
+    object-fit: cover;
+    border: 1px solid #888;
+    padding: 2px;
+    background: white;
+}
+
+.user-name {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #222;
+}
+
+.user-details {
+    transform: translateY(-10px);
+
+}
+
+#track {
     position: absolute;
-    top: 48%;
+    top: 75%;
     left: 50%;
-    height: 50%;
-    width: 50%;
-    transform: translate(-50%, -70%);   
+    transform: translate(-50%, -50%);
+    width: 340px;
+    z-index: 1;
+}
+
+.activity-content {
+    display: flex;
+    gap: 12px;
+    min-height: 90px;
+    align-items: flex-start;
+}
+
+#musicimage {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    flex-shrink: 0;
+    image-rendering: auto;
+}
+
+.activity-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+#musicname {
+    font-family: "Pixelated MS Sans Serif";
+
+    font-size: 13px;
+}
+
+#musicartist {
+    font-family: "Pixelated MS Sans Serif";
+
+    color: #444;
+}
+
+#musicalbum {
+    font-family: "Pixelated MS Sans Serif";
+    color: #666;
+    font-size: 10px;
 }
 
 
-#main h1 {
-    color: rgb(0, 0, 0);
-    padding-top: 175px;
-    font-size: 28px;
+
+.progress-container {
+    margin-top: 12px;
+    display: none;
+}
+
+.progress-bar {
+    height: 7px;
+    background: #ddd;
+    border: 1px solid #888;
+    padding: 1px;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    /* background: linear-gradient(
+        to bottom,
+        #9bd5ff,
+        #2685d9
+    ); */
+    transition: width 1s linear;
+}
+
+.progress-time {
+    font-family: "Pixelated MS Sans Serif";
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin-top: 3px;
+    color: #555;
+}
+
+.activity-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding-top: 6px;
+    font-size: 10px;
+    color: #666;
+}
+
+.social-section {
+  display: flex;
+  justify-content: center;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 20px;
+
+}
+
+.social-buttons button {
+    width: 65px;
+    height: 55px;
+    padding: 5px;
+    display: flex;
     text-align: center;
-    font-family: Tahoma;
+    align-items: center;
+    justify-content: center;
 }
 
-#track{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 120%);
-    width: 480px;
-    height: 120px;
+.social-buttons button img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    pointer-events: none;
 }
 
-#track img{
-    
-    height: 70px;
-    padding-left: 5px;
-}
-
-#musicname{
-    position: absolute;
-    top: 30px;
-    left: 90px;
-}
-#youtubeicn{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    padding: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(55%, 57%);
-}
-#discordicn{
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-    transform: translate(-155%, 55%);
+#webamp {
+    position: fixed;
+    bottom: 190px;
+    right: 20px;
+    width: 275px;
+    z-index: 100;
 }
