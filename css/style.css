@@ -204,6 +204,18 @@ body {
     position: fixed;
     bottom: 190px;
     right: 20px;
-    width: 275px;
-    z-index: 100;
+    width: 0;
+    height: 0;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    #webamp {
+        top: 200px;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        width: 0;
+        height: 0;
+    }
 }
