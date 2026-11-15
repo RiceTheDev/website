@@ -1,5 +1,5 @@
 # raice's place
-
+ 
 `my little corner of the internet!!!11!!`
 
 <img width="640" height="360" alt="Screenshot of raice's place" src="https://github.com/user-attachments/assets/b63ddfc3-6142-4e60-a0c0-24f5df4d8b64" />
