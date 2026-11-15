@@ -24,15 +24,21 @@
     <meta name="twitter:description" content="my cool ass website">
     <meta name="twitter:image" content="https://raice.pages.dev/assets/preview.png">
     
-    
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 7.css was fucking my webamp, so i prefixed everything with w7-* -->
     <link rel="stylesheet" href="css/7.css"/>
     <title>raice&apos;s website</title>
 </head>
 <body>
-    <img draggable=false src="assets/g1p4_Droidviews.jpg" id="bg"></img>
+
+<!-- 
+    HEY! dont read my code, its bad, im serious.
+   i need to clean this up, its a mess... 
+-->
+    <img draggable=false src="/assets/g1p4_Droidviews.jpg" id="bg"></img>
     
     <div class="w7-window glass active" id="main" style="z-index: 1; --w7-w-bg: #5ba56f;">
     <div class="title-bar" style="background-attachment: local;">
@@ -86,7 +92,7 @@
 
         <div class="w7-window-body has-space">
             <div class="activity-content">
-                <img draggable="false" src="assets/loading.gif" id="musicimage">
+                <img draggable="false" src="/assets/loading.gif" id="musicimage">
                 <div class="activity-info">
                     <span id="musicname">Loading...</span>
                     <span id="musicartist"></span>
@@ -115,6 +121,6 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script>
 <script src="https://unpkg.com/webamp/built/webamp.bundle.min.js"></script>
-<script src="js/webamp.js"></script>
-<script src="js/script.js"></script>
+<script src="/js/webamp.js"></script>
+<script src="/js/script.js"></script>
 </html>
