@@ -43,7 +43,6 @@ webamp.renderWhenReady(document.getElementById('webamp')).then(() => {
     if (isMobile) {
         webamp.store.dispatch({ type: "CLOSE_WINDOW", windowId: "equalizer" });
         webamp.store.dispatch({ type: "CLOSE_WINDOW", windowId: "playlist" });
-
     }
 
     const startAutoplay = () => {
