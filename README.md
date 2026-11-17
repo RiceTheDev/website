@@ -11,7 +11,7 @@ my ~~beautiful~~ website running on cloudflare pages for anyone to see!
 - aero interface
 - live discord presence
 - spotify listening status and progress bar
-- portifolio (neither i have good projects or this feature implemented yet)
+- ~~portifolio~~ (neither i have good projects or this feature implemented **yet**)
 - a buggy unresponsive ui
 - more later™
 
