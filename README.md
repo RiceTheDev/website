@@ -1,4 +1,4 @@
-# raice's place
+# raice's place <img width="88" height="31" alt="NoAi_03" src="https://github.com/user-attachments/assets/e2a6dc9e-8114-40f7-b89d-ca1950f74202" /> 
  
 `my little corner of the internet!!!11!!`
 
